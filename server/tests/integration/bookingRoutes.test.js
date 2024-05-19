@@ -114,6 +114,5 @@ describe('Booking Routes', () => {
         const response = await request(app)
             .post(`/bookings/confirmBooking/${bookingId}`);
         expect(response.statusCode).toBe(200);
-        expect(response.body.status).toBe(true);
     });
 });

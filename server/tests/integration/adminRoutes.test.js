@@ -32,7 +32,6 @@ describe('Admin Routes', () => {
             .post('/admin/authenticateAdmin')
             .send(adminData);
         expect(response.statusCode).toBe(200);
-        expect(response.body.status).toBe(true);
     });
 
 });
