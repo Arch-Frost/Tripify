@@ -100,7 +100,8 @@ const deleteUser = async (id) => {
         await users.deleteOne({id});
 
         return {
-            status: true
+            status: true,
+            message: 'User deleted successfully!'
         }
     }
     catch(err) {

@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "nodemon ./src/server.js"
   },
   "keywords": [],
@@ -21,6 +21,12 @@
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.2.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^7.0.0"
   }
 }
