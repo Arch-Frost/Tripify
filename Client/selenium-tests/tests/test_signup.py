@@ -25,13 +25,18 @@ def test_successful_signup(driver):
 def test_password_mismatch_error(driver):
     signup_page = SignupPage(driver)
     signup_page.open()
+    time.sleep(2)
     signup_page.signup('John', 'Doe', 'john.doe@example.com', 'password', 'differentpassword')
     error_message = signup_page.get_warning_message()
+    time.sleep(2)
     assert "Password and Confirm Password must be the same!" in error_message
 
 def test_missing_field_error(driver):
     signup_page = SignupPage(driver)
     signup_page.open()
+    time.sleep(2)
     signup_page.signup('John', '', 'john.doe@example.com', 'password', 'password')
     error_message = signup_page.get_warning_message()
+    time.sleep(5)
     assert "Please Fill All Fields!" in error_message
+    
