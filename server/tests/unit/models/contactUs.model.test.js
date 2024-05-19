@@ -29,7 +29,7 @@ describe('Contact Us Model Tests', () => {
 
     const result = await addNewComplaint(complaintData);
     expect(result.status).toBe(false);
-    expect(result.message).toBe('This response is already submitted!');
+    expect(result.message).toBe('Response could not be submitted, please try again!');
   });
 
   // Test for getAllComplaints method
